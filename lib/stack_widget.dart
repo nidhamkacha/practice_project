@@ -11,9 +11,9 @@ class _StackWidgetState extends State<StackWidget> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      // appBar: AppBar(
-      //   backgroundColor: Colors.red,
-      // ),
+      appBar: AppBar(
+        backgroundColor: Colors.red,
+      ),
       // body: Column(
       //   children: [
       //     Stack(
@@ -38,40 +38,69 @@ class _StackWidgetState extends State<StackWidget> {
       //     ),
       //   ],
       // ),
-      body: Stack(
+      body: Column(
         children: [
-          Column(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            children: [
-              Row(
-                mainAxisAlignment: MainAxisAlignment.end,
-                children: [
-                  Image.asset(
-                    'images/Ellipse 29.png',
-                    scale: 3,
-                  )
-                ],
-              ),
-              Row(
-                children: [
-                  Image.asset(
-                    'images/Ellipse 28.png',
-                    scale: 3,
-                  )
-                ],
-              ),
-            ],
+          Container(
+            height: 100,
+            width: double.infinity,
+            color: Colors.amber,
           ),
-          Column(
-            children: [
-              Text("data"),
-            ],
-          )
-          // Container(
-          //   width: double.infinity,
-          // ),
+          Divider(
+            color: Colors.black,
+            height: 15,
+            endIndent: 50,
+            indent: 50,
+            thickness: 10,
+          ),
+          Container(
+            height: 100,
+            width: double.infinity,
+            color: Colors.red,
+          ),
+          Spacer(
+           
+          ),
+          Container(
+            height: 100,
+            width: double.infinity,
+            color: Colors.pink,
+          ),
         ],
       ),
+      // body: Stack(
+      //   children: [
+      //     Column(
+      //       mainAxisAlignment: MainAxisAlignment.spaceBetween,
+      //       children: [
+      //         Row(
+      //           mainAxisAlignment: MainAxisAlignment.end,
+      //           children: [
+      //             Image.asset(
+      //               'images/Ellipse 29.png',
+      //               scale: 3,
+      //             )
+      //           ],
+      //         ),
+      //         Row(
+      //           children: [
+      //             Image.asset(
+      //               'images/Ellipse 28.png',
+      //               scale: 3,
+      //             )
+      //           ],
+      //         ),
+      //       ],
+      //     ),
+      //     Column(
+      //       children: [
+      //         Text("data"),
+      //       ],
+      //     )
+      //     // Container(
+      //     //   width: double.infinity,
+      //     // ),
+      //   ],
+      // ),
     );
   }
 }
