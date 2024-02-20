@@ -38,34 +38,35 @@ class _StackWidgetState extends State<StackWidget> {
       //     ),
       //   ],
       // ),
-      body: Column(
-        children: [
-          Container(
-            height: 100,
-            width: double.infinity,
-            color: Colors.amber,
-          ),
-          Divider(
-            color: Colors.black,
-            height: 15,
-            endIndent: 50,
-            indent: 50,
-            thickness: 10,
-          ),
-          Container(
-            height: 100,
-            width: double.infinity,
-            color: Colors.red,
-          ),
-          Spacer(
-           
-          ),
-          Container(
-            height: 100,
-            width: double.infinity,
-            color: Colors.pink,
-          ),
-        ],
+      body: SingleChildScrollView(
+        
+        child: Column(
+          children: [
+            Container(
+              height: 100,
+              width: double.infinity,
+              color: Colors.amber,
+            ),
+            Divider(
+              color: Colors.black,
+              height: 15,
+              endIndent: 50,
+              indent: 50,
+              thickness: 10,
+            ),
+            Container(
+              height: 100,
+              width: double.infinity,
+              color: Colors.red,
+            ),
+            Spacer(),
+            Container(
+              height: 100,
+              width: double.infinity,
+              color: Colors.pink,
+            ),
+          ],
+        ),
       ),
       // body: Stack(
       //   children: [
