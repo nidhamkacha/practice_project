@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:practice_project/row_col_stack/practice.dart';
 import 'package:practice_project/stack_widget.dart';
 
 void main() {
@@ -14,11 +15,11 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Flutter Demo',
       theme: ThemeData(
-      
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      home: const StackWidget(),
+      // home: const StackWidget(),
+      home: PracticeScreen(),
     );
   }
 }
