@@ -38,35 +38,129 @@ class _StackWidgetState extends State<StackWidget> {
       //     ),
       //   ],
       // ),
-      body: SingleChildScrollView(
-        
-        child: Column(
-          children: [
-            Container(
-              height: 100,
-              width: double.infinity,
-              color: Colors.amber,
+      body: Column(
+        children: [
+          Container(
+            height: 100,
+            width: double.infinity,
+            color: Colors.amber,
+            child: RichText(
+              text: TextSpan(
+                text: 'Text',
+                style: TextStyle(fontSize: 30, color: Colors.black),
+                children: [
+                  TextSpan(
+                    text: "Text",
+                    style: TextStyle(
+                      color: Colors.red,
+                      fontWeight: FontWeight.bold,
+                    ),
+                  ),
+                  TextSpan(
+                    text: "Text",
+                    // style: TextStyle(
+                    //   color: Colors.red,
+                    //   fontWeight: FontWeight.bold,
+                    // ),
+                  ),
+                ],
+              ),
             ),
-            Divider(
-              color: Colors.black,
-              height: 15,
-              endIndent: 50,
-              indent: 50,
-              thickness: 10,
+            // child: RichText(
+            //   text: TextSpan(
+            //     text: 'Hello ',
+            //     style: DefaultTextStyle.of(context).style,
+            //     children: const <TextSpan>[
+            //       TextSpan(
+            //           text: 'bold',
+            //           style: TextStyle(fontWeight: FontWeight.bold)),
+            //       TextSpan(text: ' world!'),
+            //     ],
+            //   ),
+            // ),
+          ),
+          SizedBox(
+            width: double.infinity,
+            child: OutlinedButton(
+              // style: ElevatedButton.styleFrom(
+              //     backgroundColor: Colors.red,
+              //     side: BorderSide(
+              //         width: 1, color: Colors.brown), //border width and color
+              //     elevation: 1, //elevation of button
+              //     shape: RoundedRectangleBorder(
+              //         //to set border radius to button
+              //         borderRadius: BorderRadius.circular(10)),
+              //     padding: EdgeInsets.all(20) //content padding inside button
+              //     ),
+              onPressed: () {},
+              child: Text("test"),
             ),
-            Container(
+          ),
+          SizedBox(
+            width: double.infinity,
+            child: ElevatedButton(
+              // style: ElevatedButton.styleFrom(
+              //     backgroundColor: Colors.red,
+              //     side: BorderSide(
+              //         width: 1, color: Colors.brown), //border width and color
+              //     elevation: 1, //elevation of button
+              //     shape: RoundedRectangleBorder(
+              //         //to set border radius to button
+              //         borderRadius: BorderRadius.circular(10)),
+              //     padding: EdgeInsets.all(20) //content padding inside button
+              //     ),
+              onPressed: () {},
+              child: Text("test"),
+            ),
+          ),
+          TextButton(
+            onPressed: () {},
+            child: Text('data'),
+          ),
+          IconButton(onPressed: () {}, icon: Icon(Icons.add)),
+          Divider(
+            color: Colors.black,
+            height: 15,
+            endIndent: 50,
+            indent: 50,
+            thickness: 10,
+          ),
+          InkWell(
+            onTap: () {
+              print('object');
+            },
+            child: Container(
               height: 100,
               width: double.infinity,
               color: Colors.red,
             ),
-            Spacer(),
-            Container(
+          ),
+          Spacer(),
+          GestureDetector(
+            onTap: () {
+              setState(() {
+                print('dwd');
+              });
+            },
+            child: Container(
               height: 100,
               width: double.infinity,
               color: Colors.pink,
             ),
-          ],
-        ),
+          ),
+          Stack(
+            children: [
+              ClipOval(
+                  child:
+                      Container(height: 50, width: 50, color: Colors.orange)),
+              ClipOval(
+                  child: Container(height: 50, width: 50, color: Colors.pink)),
+              ClipOval(
+                  child: Container(
+                      height: 50, width: 50, color: Colors.greenAccent)),
+            ],
+          ),
+        ],
       ),
       // body: Stack(
       //   children: [
