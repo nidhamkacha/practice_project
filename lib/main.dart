@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:practice_project/list_tile.dart';
 import 'package:practice_project/listview.dart';
+import 'package:practice_project/row_col_stack/food_card.dart';
 import 'package:practice_project/row_col_stack/loading.dart';
 import 'package:practice_project/row_col_stack/practice.dart';
 import 'package:practice_project/stack_widget.dart';
@@ -17,6 +18,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       title: 'Flutter Demo',
       theme: ThemeData(
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
@@ -24,7 +26,8 @@ class MyApp extends StatelessWidget {
       ),
       // home: const TextFromFild(),
       // home: PracticeScreen(),
-      home: ListTileWidget(),
+      // home: ListTileWidget(),
+      home: FoodcardScreen(),
     );
   }
 }
