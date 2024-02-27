@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:practice_project/Listview_builder.dart';
 import 'package:practice_project/list_tile.dart';
 import 'package:practice_project/listview.dart';
 import 'package:practice_project/row_col_stack/food_card.dart';
@@ -26,8 +27,8 @@ class MyApp extends StatelessWidget {
       ),
       // home: const TextFromFild(),
       // home: PracticeScreen(),
-      // home: ListTileWidget(),
-      home: FoodcardScreen(),
+      home: ListViewBuilderScreen(),
+      //home: FoodcardScreen(),
     );
   }
 }

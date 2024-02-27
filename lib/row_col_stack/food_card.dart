@@ -72,6 +72,7 @@ class _FoodcardScreenState extends State<FoodcardScreen> {
                   height: 6,
                 ),
                 Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceAround,
                   children: [
                     Text(
                       "\$10",
