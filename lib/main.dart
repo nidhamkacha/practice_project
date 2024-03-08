@@ -8,6 +8,7 @@ import 'package:practice_project/row_col_stack/food_card.dart';
 import 'package:practice_project/row_col_stack/loading.dart';
 import 'package:practice_project/row_col_stack/practice.dart';
 import 'package:practice_project/stack_widget.dart';
+import 'package:practice_project/tabbar_screen.dart';
 import 'package:practice_project/text_fromfid.dart';
 
 void main() {
@@ -29,7 +30,7 @@ class MyApp extends StatelessWidget {
       ),
       // home: const TextFromFild(),
       // home: PracticeScreen(),
-      home: MapViewScreen(),
+      home: TabBarScreen(),
       //home: FoodcardScreen(),
     );
   }

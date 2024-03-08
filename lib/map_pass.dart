@@ -29,7 +29,6 @@ class _MapViewScreenState extends State<MapViewScreen> {
       'number': '8794541785',
       'age': '24',
     },
-    
   ];
 
   @override
