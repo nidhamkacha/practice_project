@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:practice_project/Listview_builder.dart';
 import 'package:practice_project/gridview_widget.dart';
 import 'package:practice_project/list_tile.dart';
@@ -21,17 +22,24 @@ class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      debugShowCheckedModeBanner: false,
-      title: 'Flutter Demo',
-      theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
-        useMaterial3: true,
-      ),
-      // home: const TextFromFild(),
-      // home: PracticeScreen(),
-      home: TabBarScreen(),
-      //home: FoodcardScreen(),
+    return ScreenUtilInit(
+       designSize: const Size(360, 800),
+      minTextAdapt: true,
+      splitScreenMode: true,
+      builder: (context, child) {
+        return MaterialApp(
+          debugShowCheckedModeBanner: false,
+          title: 'Flutter Demo',
+          theme: ThemeData(
+            colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
+            useMaterial3: true,
+          ),
+          // home: const TextFromFild(),
+          // home: PracticeScreen(),
+          home: TabBarScreen(),
+          //home: FoodcardScreen(),
+        );
+      },
     );
   }
 }

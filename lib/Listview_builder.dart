@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class ListViewBuilderScreen extends StatefulWidget {
   const ListViewBuilderScreen({super.key});
@@ -37,7 +38,7 @@ class _ListViewBuilderScreenState extends State<ListViewBuilderScreen> {
         body: ListView.separated(
             itemBuilder: (context, index) {
               return Container(
-                height: 50,
+                height: 50.h,
                 color: Colors.pink,
               );
             },

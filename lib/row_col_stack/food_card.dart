@@ -11,12 +11,14 @@ class FoodcardScreen extends StatefulWidget {
 class _FoodcardScreenState extends State<FoodcardScreen> {
   @override
   Widget build(BuildContext context) {
+    var height = MediaQuery.of(context).size.height;
+    var width = MediaQuery.of(context).size.width;
     return Scaffold(
       backgroundColor: Colors.yellow,
       body: Center(
         child: Container(
-          width: 200,
-          height: 265,
+          width: width * 0.5,
+          height: height * 0.35,
           decoration: BoxDecoration(
             color: Colors.white,
             borderRadius: BorderRadius.circular(15),
