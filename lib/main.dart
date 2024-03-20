@@ -5,6 +5,7 @@ import 'package:practice_project/gridview_widget.dart';
 import 'package:practice_project/list_tile.dart';
 import 'package:practice_project/listview.dart';
 import 'package:practice_project/map_pass.dart';
+import 'package:practice_project/popup_manu.dart';
 import 'package:practice_project/row_col_stack/food_card.dart';
 import 'package:practice_project/row_col_stack/loading.dart';
 import 'package:practice_project/row_col_stack/practice.dart';
@@ -36,7 +37,7 @@ class MyApp extends StatelessWidget {
           ),
           // home: const TextFromFild(),
           // home: PracticeScreen(),
-          home: TabBarScreen(),
+          home: PopupmanuButtonScreen(),
           //home: FoodcardScreen(),
         );
       },
