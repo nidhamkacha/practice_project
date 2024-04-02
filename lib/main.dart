@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:practice_project/Listview_builder.dart';
+import 'package:practice_project/dialog_screen.dart';
 import 'package:practice_project/gridview_widget.dart';
 import 'package:practice_project/list_tile.dart';
 import 'package:practice_project/listview.dart';
@@ -24,7 +25,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ScreenUtilInit(
-       designSize: const Size(360, 800),
+      designSize: const Size(360, 800),
       minTextAdapt: true,
       splitScreenMode: true,
       builder: (context, child) {
@@ -37,7 +38,7 @@ class MyApp extends StatelessWidget {
           ),
           // home: const TextFromFild(),
           // home: PracticeScreen(),
-          home: PopupmanuButtonScreen(),
+          home: DialogScreen(),
           //home: FoodcardScreen(),
         );
       },
