@@ -9,6 +9,7 @@ class TextFromFild extends StatefulWidget {
 
 class _TextFromFildState extends State<TextFromFild> {
   TextEditingController _namecontroller = TextEditingController();
+  double isScroll = 0.0;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -38,7 +39,45 @@ class _TextFromFildState extends State<TextFromFild> {
                 ),
               ),
             ),
-            Text(_namecontroller.text)
+            Text(_namecontroller.text),
+            SliderTheme(
+              data: SliderThemeData(
+                  thumbColor: Colors.green,
+                  thumbShape: RoundSliderThumbShape(enabledThumbRadius: 10)),
+              child: Slider(
+                divisions: 10,
+                label: isScroll.toString(),
+                inactiveColor: Colors.black,
+                min: 0,
+                max: 100,
+                value: isScroll,
+                // activeColor: Colors.red,
+                onChanged: (double value) {
+                  setState(() {
+                    isScroll = value;
+                  });
+                },
+              ),
+            ),
+            //Text(isScroll.toString()),
+            ElevatedButton(
+              onPressed: () {
+                final snackBar = SnackBar(
+                  content: const Text('Yay! A SnackBar!'),
+                  action: SnackBarAction(
+                    label: 'Undo',
+                    onPressed: () {
+                      // Some code to undo the change.
+                    },
+                  ),
+                );
+
+                // Find the ScaffoldMessenger in the widget tree
+                // and use it to show a SnackBar.
+                ScaffoldMessenger.of(context).showSnackBar(snackBar);
+              },
+              child: const Text('Show SnackBar'),
+            ),
           ],
         ),
       ),

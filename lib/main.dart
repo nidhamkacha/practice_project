@@ -1,6 +1,8 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:practice_project/Listview_builder.dart';
+import 'package:practice_project/cupertino_navbar.dart';
 import 'package:practice_project/dialog_screen.dart';
 import 'package:practice_project/gridview_widget.dart';
 import 'package:practice_project/list_tile.dart';
@@ -38,7 +40,8 @@ class MyApp extends StatelessWidget {
           ),
           // home: const TextFromFild(),
           // home: PracticeScreen(),
-          home: DialogScreen(),
+          // home: CupertinoApp(home: DialogScreen()),
+          home: TextFromFild(),
           //home: FoodcardScreen(),
         );
       },
