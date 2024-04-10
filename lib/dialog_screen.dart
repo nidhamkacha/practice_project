@@ -1,3 +1,4 @@
+import 'package:country_picker/country_picker.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
@@ -18,6 +19,7 @@ class _DialogScreenState extends State<DialogScreen> {
     super.initState();
   }
 
+  String Contry = "";
   DateTime? date;
   bool light = true;
   @override
@@ -189,6 +191,68 @@ class _DialogScreenState extends State<DialogScreen> {
               },
               child: const Text('Show Date Picker'),
             ),
+            Center(
+              child: TextField(
+                controller: dateInput,
+                decoration: InputDecoration(
+                  icon: Icon(Icons.calendar_today),
+                  labelText: "Enter Time",
+                ),
+                readOnly: true,
+                onTap: () async {
+                  TimeOfDay? pickedTime = await showTimePicker(
+                    context: context,
+                    initialTime: TimeOfDay.now(),
+                  );
+
+                  if (pickedTime != null) {
+                    String formattedTime =
+                        "${pickedTime.hour}:${pickedTime.minute}";
+                    print("Formatted Time: $formattedTime");
+                    setState(() {
+                      dateInput.text = formattedTime;
+                    });
+                  }
+                },
+              ),
+            ),
+            ElevatedButton(
+                onPressed: () {
+                  showCountryPicker(
+                      context: context,
+                      countryListTheme: CountryListThemeData(
+                        flagSize: 25,
+                        backgroundColor: Colors.white,
+                        textStyle:
+                            TextStyle(fontSize: 16, color: Colors.blueGrey),
+                        bottomSheetHeight:
+                            500, // Optional. Country list modal height
+                        //Optional. Sets the border radius for the bottomsheet.
+                        borderRadius: BorderRadius.only(
+                          topLeft: Radius.circular(20.0),
+                          topRight: Radius.circular(20.0),
+                        ),
+                        //Optional. Styles the search field.
+                        inputDecoration: InputDecoration(
+                          labelText: 'Search',
+                          hintText: 'Start typing to search',
+                          prefixIcon: const Icon(Icons.search),
+                          border: OutlineInputBorder(
+                            borderSide: BorderSide(
+                              color: const Color(0xFF8C98A8).withOpacity(0.2),
+                            ),
+                          ),
+                        ),
+                      ),
+                      onSelect: (Country country) {
+                        print('Select country: ${country.displayName}');
+                        setState(() {
+                          Contry = country.displayName;
+                        });
+                      });
+                },
+                child: Text('Contry Picker')),
+            Text(Contry),
           ],
         ),
       ),

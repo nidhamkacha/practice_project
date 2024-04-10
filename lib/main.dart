@@ -41,7 +41,7 @@ class MyApp extends StatelessWidget {
           // home: const TextFromFild(),
           // home: PracticeScreen(),
           // home: CupertinoApp(home: DialogScreen()),
-          home: TextFromFild(),
+          home: DialogScreen(),
           //home: FoodcardScreen(),
         );
       },
