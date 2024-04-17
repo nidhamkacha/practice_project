@@ -39,6 +39,7 @@ dependencies:
   flutter_screenutil: 
   intl: ^0.19.0
   country_picker: ^2.0.25
+  carousel_slider: ^4.2.1
 
 dev_dependencies:
   flutter_test:
