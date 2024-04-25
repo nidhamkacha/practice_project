@@ -1,20 +1,8 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:practice_project/Listview_builder.dart';
-import 'package:practice_project/cupertino_navbar.dart';
-import 'package:practice_project/dialog_screen.dart';
-import 'package:practice_project/gridview_widget.dart';
-import 'package:practice_project/list_tile.dart';
-import 'package:practice_project/listview.dart';
-import 'package:practice_project/map_pass.dart';
-import 'package:practice_project/popup_manu.dart';
-import 'package:practice_project/row_col_stack/food_card.dart';
-import 'package:practice_project/row_col_stack/loading.dart';
-import 'package:practice_project/row_col_stack/practice.dart';
-import 'package:practice_project/stack_widget.dart';
-import 'package:practice_project/tabbar_screen.dart';
-import 'package:practice_project/text_fromfid.dart';
+import 'package:geolocator/geolocator.dart';
+import 'package:practice_project/geolocator.dart';
 
 void main() {
   runApp(const MyApp());
@@ -41,7 +29,7 @@ class MyApp extends StatelessWidget {
           // home: const TextFromFild(),
           // home: PracticeScreen(),
           // home: CupertinoApp(home: DialogScreen()),
-          home: DialogScreen(),
+          home: geolocatorScreen(),
           //home: FoodcardScreen(),
         );
       },
